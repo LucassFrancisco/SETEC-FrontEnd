@@ -38,16 +38,22 @@ body {
   transition: background var(--transition), color var(--transition);
 }
 
-header img {
-  width: 150px; /* Ajuste o tamanho da logo conforme necessário */
-  margin-right: 20px; /* Espaço entre a logo e o restante do cabeçalho */
-  float: left; /* Alinha a logo à esquerda */
-}
-
 header {
+  display: flex;
+  justify-content: space-between; /* Logo à esquerda, título e botão à direita */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
   background: var(--header-bg);
   color: white;
   padding: 30px 10px;
+}
+
+header img {
+  width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+  margin-right: 20px; /* Espaço entre a logo e o restante do cabeçalho */
+}
+
+header h1, header p {
+  margin: 0; /* Remove margens do título e subtítulo */
 }
 
 button {
@@ -122,4 +128,3 @@ footer {
 - :root = tema claro; .dark = sobrescrita para tema escuro
 - O botão apenas troca a classe "dark" no <body>
 */
-

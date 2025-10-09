@@ -39,7 +39,6 @@ body {
 }
 
 header {
-  justify-content: space-between; /* Logo à esquerda, título e botão à direita */
   align-items: center; /* Alinha os itens verticalmente ao centro */
   background: var(--header-bg);
   color: white;

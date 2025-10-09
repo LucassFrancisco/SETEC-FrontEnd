@@ -38,6 +38,12 @@ body {
   transition: background var(--transition), color var(--transition);
 }
 
+header img {
+  width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+  margin-right: 20px; /* Espaço entre a logo e o restante do cabeçalho */
+  float: left; /* Alinha a logo à esquerda */
+}
+
 header {
   background: var(--header-bg);
   color: white;

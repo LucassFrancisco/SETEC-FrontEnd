@@ -1,0 +1,119 @@
+/* Theme variables - light as default */
+:root {
+  --bg: #f9f9f9;
+  --surface: #ffffff; /* sections, cards */
+  --text: #0f1724; /* primary body text */
+  --muted: #6b7280; /* secondary text */
+  --primary: #007bff;
+  --accent: #0056b3;
+  --card-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  --card-hover-bg: #f1f5f9;
+  --btn-bg: #ffffff;
+  --btn-text: var(--primary);
+  --header-bg: var(--primary);
+  --transition: 200ms ease;
+}
+
+/* Dark theme overrides when .dark is on body */
+.dark {
+  --bg: #0b1220;
+  --surface: #0f1724;
+  --text: #e6eef8;
+  --muted: #94a3b8;
+  --primary: #00bfff;
+  --accent: #009ad6;
+  --card-shadow: 0 8px 22px rgba(2,6,23,0.6);
+  --card-hover-bg: #0e1622;
+  --btn-bg: #0f1724;
+  --btn-text: var(--text);
+  --header-bg: var(--primary);
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  text-align: center;
+  transition: background var(--transition), color var(--transition);
+}
+
+header {
+  background: var(--header-bg);
+  color: white;
+  padding: 30px 10px;
+}
+
+button {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+button:focus {
+  outline: 3px solid rgba(0,123,255,0.2);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  padding: 20px;
+  width: 200px;
+  transition: transform var(--transition), background var(--transition), color var(--transition);
+  color: var(--text);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: var(--card-hover-bg);
+}
+
+section {
+  background: var(--surface);
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  transition: background var(--transition), color var(--transition);
+}
+
+footer {
+  margin-top: 30px;
+  color: var(--muted);
+  transition: color var(--transition);
+}
+
+/* Make the theme switch button look good on both themes */
+#temaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Small responsive tweak */
+@media (max-width: 560px) {
+  .card { width: calc(100% - 40px); }
+  section { width: 95%; }
+}
+
+/* Comentários simples para facilitar explicar o CSS:
+- As cores ficam em variáveis (:
+- :root = tema claro; .dark = sobrescrita para tema escuro
+- O botão apenas troca a classe "dark" no <body>
+*/
+

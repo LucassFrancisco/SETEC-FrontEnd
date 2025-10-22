@@ -2,7 +2,7 @@ body {
   font-family: Poppins, sans-serif;
   margin: 0;
   text-align: center;
-  transition: background var(--transition), color var(--transition);
+  background: #f0f0f0;
 }
 
 header {
@@ -11,19 +11,12 @@ header {
   padding: 30px 10px;
 }
 
-button {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  border: 1px solid rgba(0,0,0,0.06);
-  padding: 8px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: transform var(--transition), background var(--transition), color var(--transition);
+header img {
+  height: 150px;
 }
 
-button:focus {
-  outline: 3px solid rgba(0,123,255,0.2);
+.logo {
+  margin: 0 15px;
 }
 
 .cards {
@@ -61,26 +54,6 @@ section {
 
 footer {
   margin-top: 30px;
-  color: var(--muted);
-  transition: color var(--transition);
+  color: #666;
+  transition: color 0.3s;
 }
-
-/* Make the theme switch button look good on both themes */
-#temaBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Small responsive tweak */
-@media (max-width: 560px) {
-  .card { width: calc(100% - 40px); }
-  section { width: 95%; }
-}
-
-/* Comentários simples para facilitar explicar o CSS:
-- As cores ficam em variáveis (:
-- :root = tema claro; .dark = sobrescrita para tema escuro
-- O botão apenas troca a classe "dark" no <body>
-*/
-

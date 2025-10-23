@@ -20,7 +20,7 @@ header {
 
 
 /*--------------------------------------------------------main--------------------------------------------------------*/
-.cards {
+.cartas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,7 +28,7 @@ header {
   padding: 20px;
 }
 
-.card {
+.carta {
   background: white;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -37,8 +37,9 @@ header {
   color: #333;
 }
 
-.card:hover {
+.carta:hover {
   transform: scale(1.05);
+  transition: transform 0.2s;
   background: #f8f8f8;
 }
 

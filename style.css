@@ -34,7 +34,6 @@ header {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 200px;
-  transition: transform 0.3s, background 0.3s, color 0.3s;
   color: #333;
 }
 
@@ -50,7 +49,6 @@ section {
   width: 80%;
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s, color 0.3s;
 }
 /*--------------------------------------------------------main--------------------------------------------------------*/
 
